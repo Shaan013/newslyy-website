@@ -10,6 +10,8 @@ const merriweather = Merriweather({
 });
 
 export const metadata: Metadata = {
+  icons: "/app_icon_without_bg.png",
+  // icons: "/newslyy-icon.svg",
   title: "Newslyy - Premium News App",
   description: "Experience global news curated with sophisticated design. Download the Newslyy app today.",
   openGraph: {
@@ -18,7 +20,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/newslyy-og.png",
+        url: "/app_icon_without_bg.png",
         width: 1200,
         height: 630,
         alt: "Newslyy App",

@@ -1,17 +1,29 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main className="w-full overflow-hidden bg-black">
       {/* Navigation Header */}
       <nav className="fixed top-0 w-full z-50 glassmorphism">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <div className="text-2xl font-bold text-newslyy-yellow tracking-tight">
+          <div className="flex items-center gap-2 text-2xl font-bold text-newslyy-yellow tracking-tight">
+            <Image
+              src="/app_icon_without_bg.png"
+              alt="Newslyy icon"
+              width={48}
+              height={48}
+              className="object-contain"
+            />
             Newslyy
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-gray-300 hover:text-white transition">
               Features
             </a>
-            <a href="#github" className="text-gray-300 hover:text-white transition">
+            <a href="https://github.com/Shaan013" 
+                              target="_blank"
+                  rel="noopener noreferrer"
+            className="text-gray-300 hover:text-white transition">
               GitHub
             </a>
             <a
@@ -60,14 +72,14 @@ export default function Home() {
             >
               ↓ Download APK
             </a>
-            <a
+            {/* <a
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 glassmorphism text-white font-semibold rounded-full hover:bg-white/10 transition border border-white/20"
             >
               View Source
-            </a>
+            </a> */}
           </div>
 
           {/* Mobile Mockup */}
@@ -77,13 +89,13 @@ export default function Home() {
                 <div className="bg-gradient-to-b from-newslyy-yellow/10 to-black/50 p-3">
                   <div className="bg-black rounded-2xl overflow-hidden aspect-[9/16]">
                     <div className="w-full h-full bg-gradient-to-b from-gray-900 to-black flex flex-col items-center justify-center p-4">
-                      <div className="w-16 h-16 mb-4">
-                        <svg viewBox="0 0 100 100" className="w-full h-full fill-newslyy-yellow">
-                          <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="2"/>
-                          <rect x="25" y="30" width="50" height="8" fill="currentColor"/>
-                          <rect x="25" y="45" width="50" height="8" fill="currentColor"/>
-                          <rect x="25" y="60" width="35" height="8" fill="currentColor"/>
-                        </svg>
+                      <div className="relative w-16 h-16 mb-4">
+                        <Image
+                          src="/app_icon_without_bg.png"
+                          alt="Newslyy icon"
+                          fill
+                          className="object-contain"
+                        />
                       </div>
                       <p className="text-white text-center text-sm">
                         <span className="text-newslyy-yellow font-bold">Newslyy</span>
@@ -235,7 +247,7 @@ export default function Home() {
             <div className="flex flex-col items-start md:items-end gap-4">
               <div className="flex gap-4">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Shaan013"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-newslyy-yellow transition"
@@ -243,12 +255,12 @@ export default function Home() {
                   GitHub
                 </a>
                 <a
-                  href="https://twitter.com"
+                  href="https://www.linkedin.com/in/shaan-patel-609879271"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-newslyy-yellow transition"
                 >
-                  Twitter
+                  LinkedIn
                 </a>
               </div>
             </div>
