@@ -1,6 +1,11 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
+import DownloadModal from "../components/DownloadModal";
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <main className="w-full overflow-hidden bg-black">
       {/* Navigation Header */}
@@ -26,22 +31,20 @@ export default function Home() {
             className="text-gray-300 hover:text-white transition">
               GitHub
             </a>
-            <a
-              href="/newslyy.apk"
-              download
+            <button
+              onClick={() => setIsModalOpen(true)}
               className="px-6 py-2 bg-newslyy-yellow text-black font-semibold rounded-full hover:bg-yellow-300 transition yellow-glow-hover"
             >
               Download APK
-            </a>
+            </button>
           </div>
           <div className="md:hidden">
-            <a
-              href="/newslyy.apk"
-              download
+            <button
+              onClick={() => setIsModalOpen(true)}
               className="px-4 py-2 bg-newslyy-yellow text-black font-semibold rounded-full text-sm"
             >
               Download
-            </a>
+            </button>
           </div>
         </div>
       </nav>
@@ -65,13 +68,12 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <a
-              href="/newslyy.apk"
-              download
+            <button
+              onClick={() => setIsModalOpen(true)}
               className="px-8 py-4 bg-newslyy-yellow text-black font-bold rounded-full hover:bg-yellow-300 transition yellow-glow-hover text-lg"
             >
               ↓ Download APK
-            </a>
+            </button>
             {/* <a
               href="https://github.com"
               target="_blank"
@@ -199,13 +201,12 @@ export default function Home() {
           </div>
 
           <div className="mt-12 text-center">
-            <a
-              href="/newslyy.apk"
-              download
+            <button
+              onClick={() => setIsModalOpen(true)}
               className="inline-block px-10 py-4 bg-newslyy-yellow text-black font-bold rounded-full hover:bg-yellow-300 transition yellow-glow-hover text-lg"
             >
               Download APK Now
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -274,6 +275,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <DownloadModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </main>
   );
 }
