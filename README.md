@@ -52,7 +52,7 @@ This project is created as a **web showcase** of a news website layout, focusing
 ![Home Screen](./screenshots/home.png)
 
 ### 📰 News Section  
-![News Screen](./screenshots/news.png)
+![News Screen](./screenshots/search.jpg)
 
 📌 *Upload your screenshots inside a folder named `screenshots` and keep the same file names.*
 
